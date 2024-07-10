@@ -1,0 +1,73 @@
+<body>
+    <style>
+            footer
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer
+            {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                border: 2px solid white;
+                width: 70%;
+                height: 25rem;
+                text-align: center;   
+                margin-top: 5rem; 
+                row-gap: 10px;     
+                justify-content: center;  
+                border-radius: 20px;  
+
+            }
+            form
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                row-gap: 1rem;
+            }
+            form input
+            {
+                background-color: transparent;
+                font-weight: bold;
+                width: 80%;
+                height: 3rem;
+                text-align: center;
+                border-radius: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+                color: white;
+            }
+
+            #submit
+            {
+                color: white;
+                background: rgb(34,193,195);
+                background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,125,253,1) 100%);
+            }
+
+            .footer h3
+            {
+                font-size: 30px;
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+    </style>
+
+    <footer>
+        <div class="footer">
+            <h3>Connect With Me</h3>
+            <form action="/submit/user" method="post">
+                <input type="text" name="name" placeholder="Your Name" class="inp">
+                <input type="text" name="email" placeholder="Your Email" class="inp">
+                <input type="text" name="subject" placeholder="Subject" class="inp">
+                <input type="text" name="message" placeholder="Message" class="inp">
+                <input type="submit" name="submit" id="submit">
+            </form>
+        </div>
+    </footer>
+</body>

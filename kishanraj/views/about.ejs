@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .aboutMe
+        {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+            margin-left: 1rem;
+            
+        }
+
+        .aboutMe ul li
+        {
+            list-style-type: none;
+            text-wrap:balance;
+            text-align:left;
+            font-size: 20px;
+            line-height: 2rem;
+        }
+
+        @media screen and (max-width: 420px) 
+        {
+          #name
+          {
+            padding-bottom: 2rem;
+          }
+
+          .aboutMe
+          {
+            margin-top: 10rem;
+          }
+          
+        }
+    </style>
+</head>
+
+
+<body>
+    <%-include('nav')%>
+
+        <div class="aboutMe">
+            <ul>
+                <li>
+                    <h2 id="name"></h2>
+                </li>
+                <li><p>i completed my 10th schooling from B.Semenary (chhapra) and intermediate from shiv janam roy (chhapra)</p></li>
+
+                <li><p>
+                    i get 75% marks in my 10th bord and 79% marks in my intermediate examination
+                </p></li>
+
+                <br><br>
+                <li><p>
+                    after completed my 10th and 12th examination i take admission in JIET college in computer science (CSE) branch for my future
+                </p></li>
+
+                <br><br>
+                <li><p>
+                    after 2 years of joining the college ,  i get  2 months internship for shripriti educational and it hub . and i sucessfully completed it.
+                </p></li>
+
+
+                 <br><br>
+                <li><p>
+                    my hobbies is playing cricket , listening music and watching hollywood movies
+                </p></li>
+
+                <br>
+                <br>
+                <li class="thanku"><big>Thanku</big></li>
+            </ul>
+
+            
+        </div>
+
+        <%-include('icons')%>
+
+
+        
+
+        <script>
+            const textToType = "Hii , I'm Kishan Raj From Chhapra Bihar";
+            const typedText = document.querySelector("#name");
+
+
+            // text one by one
+            function typeText() {
+                let index = 0;
+                const interval = setInterval(() => {
+                    if (index < textToType.length) {
+                        let letter = textToType.charAt(index)
+                        
+                        typedText.textContent += letter
+
+                        index++;
+                    } else {
+                        clearInterval(interval); // Stop interval when text is fully typed
+                    }
+                }, 100); // Interval time between each letter (adjust for speed)
+            }
+
+
+
+            //random color
+            function getRandomColor() {
+                const randomNumber = Math.floor(Math.random() * 16777216);
+                const randomColor = '#' + randomNumber.toString(16).padStart(6, '0');
+                return randomColor;
+            }
+            
+            
+            const port = document.querySelector(".port li")
+            const name = document.querySelector("#name")
+            const thanku = document.querySelector(".thanku")
+            setInterval(()=>
+            {
+                port.style.color = getRandomColor()
+                name.style.color = getRandomColor()
+                thanku.style.color = getRandomColor()
+
+            },1000)
+            console.log(port);
+            
+
+
+            window.onload = typeText;
+        </script>
+</body>
+
+</html>

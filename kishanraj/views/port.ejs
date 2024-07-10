@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /* body */
+  body {
+    background-color: black;
+
+  }
+
+
+  h2,
+  h1,
+  p {
+    color: white;
+    padding: 5px;
+  }
+
+  h1::first-letter {
+    color: red;
+  }
+
+  h2 {
+    color: blue;
+  }
+
+  .main {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30rem;
+  }
+
+  .left_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 60%;
+  }
+
+  .right_part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+
+  .img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('k.jpg');
+    box-shadow: rgb(7, 255, 255) 1px 1px 10px 10px;
+  }
+
+  .img:hover {
+    box-shadow: rgb(247, 12, 231) 1px 1px 10px 10px;
+    transition-duration: 2000ms;
+  }
+
+  .img img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+  }
+
+
+  @media screen and (max-width: 420px) 
+  {
+    .left_part
+    {
+       width: 100%;
+    }
+    .left_part h2
+    {
+       color: rgb(157, 213, 15);
+    }
+
+    main
+    {
+      margin-top: 30rem;
+     
+    }
+    
+     .intro
+    {
+      color: aquamarine;
+      
+    }
+  }
+
+
+  /*i phone 14 */
+  @media screen and (max-width: 435px) 
+  {
+    .left_part
+    {
+       width: 100%;
+    }
+    .left_part h2
+    {
+       color: rgb(157, 213, 15);
+    }
+
+    .maincont
+    {
+      margin-top: 30rem;
+     
+    }
+    
+     .intro
+    {
+      color: aquamarine;
+      font-size: 10px;
+      
+    }
+  }
+
+
+  /*surface duo*/
+  @media screen and (max-width: 540px) 
+  {
+    .left_part
+    {
+       width: 100%;
+    }
+    .left_part h2
+    {
+       color: rgb(157, 213, 15);
+    }
+
+    main
+    {
+      margin-top: 25rem;
+     
+    }
+    
+     .intro
+    {
+      color: aquamarine;
+      
+    }
+  }
+
+
+  /*ipad air*/
+  @media screen and (max-width: 1024px) 
+  {
+    .main
+    {
+      flex-direction:column-reverse;
+      margin-top: 15rem;
+      row-gap: 2rem;
+    }
+
+    .left_part
+    {
+      width: 100%;
+    }
+
+    .left_part .intro
+    {
+      font-size: 2rem;
+      word-spacing: 8px;
+      line-height: 40px;
+    }
+
+    
+  }
+
+</style>
+
+<body>
+
+  <%-include('nav')%>
+
+
+    <main class="maincont">
+      <div class="main">
+        <div class="left_part">
+          <h1 class="name">Hii , I Am Kishan Raj</h1>
+          <h2 id="typedText"></h2>
+
+          <p class="intro">
+            I Passionate about creating user-friendly and visually appealing
+            web applications. Strong understanding of HTML, CSS, and
+            JavaScript, as well as experience with SQL,MONGO DB,NODE JS and GSAP Excellent
+            problem-solving and debugging skills. Ability to work
+            independently.
+          </p>
+        </div>
+
+
+        <!-- right part -->
+        <div class="right_part">
+
+          <div class="img">
+            <img src="https://pbs.twimg.com/profile_images/1307787708903940097/e8YKx1WE_400x400.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+
+      
+
+
+       
+    </main>
+    <!-- form -->
+    <%-include('footer')%>
+
+     <!-- icons -->
+     <%-include('icons')%>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+      const timeline0 = gsap.timeline()
+
+      //text
+      gsap.from('#typedText', {
+        y: -500,
+        opacity: 0,
+        duration: 2
+      })
+
+      //name
+      timeline0.from(".name",
+        {
+          opacity: 0,
+          duration: 1,
+          scale: 5
+        })
+
+      //intro
+      timeline0.from(".intro", {
+        opacity: 0,
+        y: 20,
+        duration: 1,
+      })
+
+      //profile
+      timeline0.from('.img',
+        {
+          opacity: 0,
+          scale: 0,
+          duration: 1
+        })
+
+
+      //scroll trigger
+
+      gsap.from("footer",
+        {
+          opacity: 0,
+          scale: 0,
+          duration: 3,
+
+          scrollTrigger:
+          {
+            trigger: ".footer",
+            scroller: "body",
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 4
+          }
+
+        }
+
+
+      )
+
+
+      const tl3 = gsap.timeline()
+      tl3.from("input",
+        {
+          opacity: 0,
+          scale: 0,
+          duration: 2,
+          stagger: 0.1,
+          scrollTrigger:
+          {
+            trigger: "input",
+            scroller: "body",
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 4
+          }
+
+        }
+      )
+
+
+
+
+      const textToType = "I'm a Front-End Devloper";
+      const typedTextElement = document.getElementById('typedText');
+
+
+      // text one by one
+      function typeText() {
+        let index = 0;
+        const interval = setInterval(() => {
+          if (index < textToType.length) {
+            let letter = textToType.charAt(index)
+            typedTextElement.textContent += letter
+
+            index++;
+          } else {
+            clearInterval(interval); // Stop interval when text is fully typed
+          }
+        }, 100); // Interval time between each letter (adjust for speed)
+      }
+
+      //change box shadow color
+      function getRandomColor() {
+        const randomInt = () => Math.floor(Math.random() * 256);
+        const red = randomInt();
+        const green = randomInt();
+        const blue = randomInt();
+        return `rgba(${red},${green},${blue},5)`;
+      }
+
+      function changeBoxShadowColor() {
+
+        const box = document.querySelector('.img');
+        const port = document.querySelector('.port li')
+        const name = document.querySelector(".name")
+        const footer = document.querySelector(".footer")
+        const submit = document.querySelector("#submit")
+        const headers = document.querySelector(".headers")
+        const newColor = getRandomColor();
+
+        port.style.color = newColor
+        name.style.color = newColor
+        footer.style.borderColor = newColor
+        submit.style.borderColor = newColor
+        headers.style.borderColor = newColor
+        linkdin.style.color = newColor
+        instagram.style.color = newColor
+        tweeter.style.color = newColor
+        admin.style.color = newColor
+        facebook.style.color = newColor
+        box.style.boxShadow = `${newColor} 1px 1px 10px 10px`
+      }
+
+
+      const id = setInterval(() => {
+        changeBoxShadowColor()
+      }, 500)
+
+
+
+
+
+      window.onload = typeText;
+
+    </script>
+</body>
+
+</html>

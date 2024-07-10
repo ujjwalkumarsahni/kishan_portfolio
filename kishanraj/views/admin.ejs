@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #256160;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20%;
+            width: 90%;
+            color: white;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #f8f6f6;
+            font-size: 2rem;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <%-include('nav')%>
+    
+    <div class="form">
+        <form action="/submit" method="post">
+            <label for="password"> AdminPassword:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <%-include("icons")%>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script>
+        
+        const form = document.querySelector('form')
+        function getRandomColor() {
+
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            const color = `rgba(${r}, ${g}, ${b}, 1)`;
+
+            form.style.boxShadow = `${color} 10px 10px 20px, ${color} 0px 1px 1px`;
+
+
+        }
+        
+    </script> -->
+    <script>
+        const form = document.querySelector('form')
+        function getRc() {
+
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            const port = document.querySelector(".port li")
+
+            const color = `rgba(${r}, ${g}, ${b}, 1)`;
+
+            form.style.boxShadow = `${color} 10px 10px 20px, ${color} 0px 1px 1px`;
+
+            port.style.color = color
+        }
+
+
+        setInterval(()=>
+        {
+            getRc()
+        },1000)
+    </script>
+</body>
+</html>

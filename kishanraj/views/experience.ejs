@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .experience {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 4rem;
+            margin-top: 15%;
+        }
+
+        .experience #ul1 {
+            text-align: center;
+        }
+
+        .experience ul li {
+            list-style-type: none;
+        }
+
+        .codesoft img,
+        .shripriti img {
+            height: 10%;
+            width: 10%;
+            border-radius: 50%;
+        }
+
+        .codesoft div,
+        .shripriti div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1rem;
+        }
+
+        .codesoft,
+        .shripriti {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 2rem;
+            border: 1px solid white;
+            width: 80%;
+            border-radius: 10%;
+
+        }
+
+        .codesoft ul li p {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <%-include('nav')%>
+
+
+        <div class="experience">
+            <ul id="ul1">
+                <li>
+                    <h2>My Experience</h2>
+                </li>
+                <li>
+                    <p>My work experience as a Software Developer and worked on below companies</p>
+                </li>
+                <br>
+            </ul>
+
+
+            <div class="codesoft">
+                <div>
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop,f=jpeg/Aq20eV79zLfpXV6b/1685789339697-YrDL60zzRBfzM6Wr.jpg"
+                        alt="">
+                    <h2>Web Devlopment Intern In Code Soft</h2>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <p>Task</p>
+                        </li>
+                        <li>Landing Page</li>
+                        <li>Portfolio Website</li>
+                        <li>Rock Paper Scissor Game</li>
+                        <li>Image Gallery</li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <p>Technology Used</p>
+                        </li>
+                        <li>Vs Code as a CodeEditor</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- shripriti -->
+            <div class="shripriti">
+                <div>
+                    <img src="https://media.licdn.com/dms/image/D4D0BAQE79Et9-G2wCg/company-logo_400_400/0/1703442839646?e=2147483647&v=beta&t=uYR_i34SqlORGHgmxBviDRK3XpND_eZZf0TayZjqdPI"
+                        alt="">
+                    <h2>Web Devlopment Intern In Shripriti Educational & IT Hub</h2>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <p>Task</p>
+                        </li>
+                        <li>Digital Timer</li>
+                        <li>Tik Tak Toe Game</li>
+                        <li>Calculator</li>
+                        <li>Quiz Application</li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <p>Technology Used</p>
+                        </li>
+                        <li>Vs Code as a CodeEditor</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <%-include('icons')%>
+
+
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+                    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+                    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+                <script>
+                    const tlcw = gsap.timeline()
+                    tlcw.from(".codesoft , .shripriti",
+                        {
+                            opacity: 0,
+                            scale: 0,
+                            duration: 2,
+                            stagger: 0.5
+
+                        }
+                    )
+
+                    const codesoft = document.querySelector(".codesoft")
+                    const shripriti = document.querySelector(".shripriti")
+
+                    const linkdin = document.querySelector("#linkdin")
+                    const instagram = document.querySelector("#instagram")
+                    const admin = document.querySelector("#admin")
+                    const tweeter = document.querySelector("#tweeter")
+                    const facebook = document.querySelector("#facebook")
+
+
+
+                    function getRandomColor() {
+
+                        const r = Math.floor(Math.random() * 256);
+                        const g = Math.floor(Math.random() * 256);
+                        const b = Math.floor(Math.random() * 256);
+
+
+                        const color = `rgba(${r}, ${g}, ${b}, 1)`;
+
+                        codesoft.style.boxShadow = `${color} 0px 0px 20px, ${color} 0px 1px 1px`;
+                        shripriti.style.boxShadow = `${color} 0px 0px 20px, ${color} 0px 1px 1px`;
+
+
+                        linkdin.style.color = color
+                        instagram.style.color = color
+                        admin.style.color = color
+                        tweeter.style.color = color
+                        facebook.style.color = color
+
+
+
+                    }
+
+
+                    setInterval(() => {
+                        getRandomColor()
+                    }, 1000)
+
+                </script>
+</body>
+
+</html>

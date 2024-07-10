@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .skills {
+            z-index: 0;
+            margin-top: 3rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .devlopment {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 3rem;
+            color: white;
+            font-size: 2rem;
+            width: 80%;
+            border: 1px solid white;
+            border-radius: 20px;
+            margin-top: 10rem;
+
+        }
+
+        .devlopment img {
+            border-radius: 50%;
+            height: 15vmin;
+            width: 15vmin;
+            z-index: -10;
+        }
+
+        .devlopment progress {
+            height: 5vmin;
+            width: 40vmin;
+            margin-bottom: 1rem;
+        }
+
+        .devlopment div {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            column-gap: 1rem;
+            row-gap: 2rem;
+            width: 80%;
+        }
+
+        .devlopment div h2 {
+            margin-bottom: 2rem;
+        }
+
+        .devlopment div h2::first-letter {
+            color: red;
+            font-weight: bold;
+            font-size: 4rem;
+        }
+
+
+        @media screen and (max-width: 700px) {
+
+            .devlopment {
+                margin-top: 0%;
+            }
+
+            .devlopment div section img {
+
+                height: 7vmin;
+                width: 10vmin;
+            }
+
+            .devlopment div h2 {
+                font-size: 1rem;
+            }
+
+            .devlopment div h2::first-letter {
+                font-size: 2rem;
+            }
+
+            .devlopment div section progress {
+                width: 30vmin;
+                margin-top: 2rem;
+            }
+
+            .database {
+                margin-top: 3rem;
+            }
+        }
+
+
+        /* medi for respo skills*/
+        @media screen and (max-width: 1024px) 
+        {
+          .skills .devlopment
+          {
+            width: 85%;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <%-include('nav')%>
+
+        <div class="skills">
+            <!-- devlopment -->
+            <div class="devlopment">
+
+                <div>
+                    <h2>Skill For Devloping a Website</h2>
+                </div>
+                <div>
+                    <!-- html -->
+                    <section>
+                        <img src="https://e7.pngegg.com/pngimages/780/934/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail.png"
+                            alt="" class="html">
+                        <progress id="htmlBar" value="90" max="100"></progress>
+                    </section>
+
+                    <!-- css -->
+                    <section>
+                        <img src="https://e7.pngegg.com/pngimages/603/759/png-clipart-css3-cascading-style-sheets-logo-html-world-wide-web-blue-angle-thumbnail.png"
+                            alt="" class="css">
+                        <progress id="progressBar" value="90" max="100"></progress>
+                    </section>
+                </div>
+
+                <div>
+                    <!-- js -->
+                    <section>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKFKeyvkjzewPJ9zFRxj_RkYfSi6PY45j6IQ&s"
+                            alt="" class="js">
+                        <progress id="progressBar" value="90" max="100"></progress>
+                    </section>
+
+                    <!-- mongo db -->
+                    <section>
+                        <img src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"
+                            alt="" class="mongodb">
+                        <progress id="progressBar" value="80" max="100"></progress>
+                    </section>
+                </div>
+
+
+                <div>
+                    <!-- node js -->
+                    <section>
+                        <img src="https://e7.pngegg.com/pngimages/306/37/png-clipart-node-js-logo-node-js-javascript-web-application-express-js-computer-software-others-miscellaneous-text-thumbnail.png"
+                            alt="" class="nodejs">
+                        <progress id="progressBar" value="70" max="100"></progress>
+                    </section>
+
+
+                    <!-- express js -->
+                    <section>
+                        <img src="https://files.codingninjas.in/article_images/custom-upload-1688934051-df5a481a.webp"
+                            alt="" class="expressjs">
+                        <progress id="progrssbar" value="60" max="100"></progress>
+                    </section>
+                </div>
+            </div>
+
+            <!-- database -->
+            <div class="database devlopment" id="database">
+                <div>
+                    <h2>Skills for Managing Db</h2>
+                </div>
+
+                <div>
+                    <section>
+                        <img src="https://w7.pngwing.com/pngs/717/111/png-transparent-mysql-round-logo-tech-companies-thumbnail.png"
+                            alt="" class="sql">
+                        <progress id="htmlBar" value="70" max="100"></progress>
+                    </section>
+
+                    <section>
+                        <img src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"
+                            alt="" class="mongodb1">
+                        <progress id="htmlBar" value="90" max="100"></progress>
+                    </section>
+                </div>
+            </div>
+
+            <!-- design -->
+            <div class="design database devlopment" id="designing">
+
+                <div>
+                    <h2>Skill for Designing</h2>
+                </div>
+
+                <div>
+                    <section>
+                        <img src="https://image.similarpng.com/very-thumbnail/2020/06/Logo-Adobe-Photoshop-CC-Vector-PNG.png"
+                            alt="" class="ps">
+                        <progress id="htmlBar" value="50" max="100"></progress>
+                    </section>
+
+                    <section>
+                        <img src="https://s3-alpha.figma.com/hub/file/1538476537/9b123151-9352-4e08-bee6-61d9244a0477-cover.png"
+                            alt="" class="figma">
+                        <progress id="htmlBar" value="70" max="100"></progress>
+                    </section>
+                </div>
+            </div>
+
+
+            <!-- additional skills -->
+            <div class="additional design database devlopment" id="additional">
+
+                <div>
+                    <h2>Additional Skills</h2>
+                </div>
+
+                <div>
+                    <section>
+                        <!-- git -->
+                        <img src="https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png"
+                            alt="" class="git">
+                        <progress id="htmlBar" value="90" max="100"></progress>
+                    </section>
+
+                    <!-- githu -->
+                    <section>
+                        <img src="https://fs.buttercms.com/resize=width:940/I351RMgSjC6YAj1Ra8pE" alt="" class="github">
+                        <progress id="htmlBar" value="70" max="100"></progress>
+                    </section>
+                </div>
+
+                <div>
+                    <section>
+                        <!-- java -->
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqy0b8y6kY8UHE6kYwWKKq-zyo3S4aeKZKvA&s"
+                            alt="" class="java">
+                        <progress id="htmlBar" value="60" max="100"></progress>
+                    </section>
+
+                    <!-- python -->
+                    <section>
+                        <img src="https://freepngimg.com/thumb/categories/1402.png" alt="" class="python">
+                        <progress id="htmlBar" value="70" max="100"></progress>
+                    </section>
+                </div>
+
+                <div>
+                    <section>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8IdRRtAfgmSNG3u8sgNcc9tHq2ipLw4RjUw&s"
+                            alt="" class="jira">
+                        <progress id="htmlBar" value="70" max="100"></progress>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+        <%-include('icons')%>
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+                integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+            <script>
+                const expressbar = document.querySelector("#expressbar")
+
+                const ptl = gsap.timeline()
+                function express() {
+
+                    ptl.from(".devlopment img , .devlopment div h2",
+                        {
+                            opacity: 0,
+                            y: -200,
+                            scale: 0,
+                            duration: 1,
+                            stagger: 0.1
+
+                        })
+
+                    ptl.from("progress",
+                        {
+                            width: "10vmin",
+                            opacity: 0,
+                            duration: 1,
+                            stagger: 0.3
+
+                        })
+
+
+                }
+
+                express()
+
+
+
+                //shadow
+                function getRandomColor() {
+                    const r = Math.floor(Math.random() * 256);
+                    const g = Math.floor(Math.random() * 256);
+                    const b = Math.floor(Math.random() * 256);
+                    const randomColor = `rgba(${r}, ${g}, ${b}, 1)`;
+
+                    //devvlopmment
+                    const html = document.querySelector(".html")
+                    const css = document.querySelector(".css")
+                    const js = document.querySelector(".js")
+                    const mongodb = document.querySelector(".mongodb")
+                    const nodejs = document.querySelector(".nodejs")
+                    const expressjs = document.querySelector(".expressjs")
+                    const port = document.querySelector(".port li")
+                    const progrss = document.querySelector("#htmlBar")
+                    const devlopment = document.querySelector(".devlopment")
+
+                    //db
+                    const database = document.querySelector(".database")
+                    const sqlbb = document.querySelector(".devlopment .sql")
+                    const mongodbdb = document.querySelector(".devlopment .mongodb1")
+
+
+                    //designing
+                    const designing = document.querySelector(".design")
+                    const ps = document.querySelector(".design .ps")
+                    const figma = document.querySelector(".design .figma")
+
+
+                    //additional skills
+                    const additional = document.querySelector(".additional")
+                    const git = document.querySelector(".git")
+                    const github = document.querySelector(".github")
+                    const java = document.querySelector(".java")
+                    const python = document.querySelector(".python")
+                    const jira = document.querySelector(".jira")
+
+
+                    //additional
+                    additional.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    git.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    github.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    java.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    python.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    jira.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+
+
+                    //devlopment
+                    html.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    css.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    js.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    mongodb.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    nodejs.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    expressjs.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+
+                    //databse
+                    database.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    sqlbb.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    mongodbdb.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+
+                    //designing
+                    designing.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    ps.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    figma.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+
+
+                    devlopment.style.boxShadow = `${randomColor} 1px 1px 10px 10px`
+                    port.style.color = randomColor
+                    htmlBar
+
+
+                    //icons footer
+                    const linkdin = document.querySelector("#linkdin")
+                    const instagram = document.querySelector("#instagram")
+                    const admin = document.querySelector("#admin")
+                    const tweeter = document.querySelector("#tweeter")
+                    const facebook = document.querySelector("#facebook")
+
+                    linkdin.style.color = randomColor
+                    instagram.style.color = randomColor
+                    admin.style.color = randomColor
+                    tweeter.style.color = randomColor
+                    facebook.style.color = randomColor
+
+
+
+                }
+
+
+                setInterval(() => {
+                    getRandomColor()
+                }, 1000)
+
+
+
+
+                //database
+                gsap.from("#database",
+                    {
+                        opacity: 0,
+                        scale: 0,
+                        duration: 2,
+    
+                        scrollTrigger:
+                        {
+                            trigger: "#database",
+                            scroller: "body",
+                            start: "top 100%",
+                            end: "top 90%",
+                            scrub: 4
+                        }
+
+                    }
+                )
+
+
+                //designing
+                gsap.from("#designing",
+                {
+                    opacity: 0,
+                    scale: 0,
+                    duration: 2,
+
+                    scrollTrigger:
+                    {
+                        trigger: "#designing",
+                        scroller: "body",
+                        start: "top 100%",
+                        end: "top 90%",
+                        scrub: 4
+                    }
+
+                }
+            )
+
+
+            //additional
+            gsap.from("#additional",
+            {
+                opacity: 0,
+                scale: 0,
+                duration: 2,
+
+                scrollTrigger:
+                {
+                    trigger: "#additional",
+                    scroller: "body",
+                    start: "top 100%",
+                    end: "top 90%",
+                    scrub: 4
+                }
+
+            }
+        )
+
+                
+
+
+               
+
+
+
+            </script>
+</body>
+
+</html>

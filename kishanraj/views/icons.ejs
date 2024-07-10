@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .icons {
+        height: 10rem;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10%;
+
+    }
+
+
+    .icons i {
+        color: white;
+        font-size: 250%;
+    }
+</style>
+
+<div class="icons">
+    <a href="https://www.linkedin.com/in/kishan-raj-a3aaa924b/"><i class="fa-brands fa-linkedin-in" id="linkdin"></i></a>
+    <a href="https://www.instagram.com/itz_kishu__04/"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+    <a href="/admin"><i class="fa-solid fa-lock" id="admin"></i></a>
+    <a href="https://x.com/home?lang=en"><i class="fa-brands fa-twitter" id="tweeter"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61557714580189"><i class="fa-brands fa-facebook" id="facebook"></i></a>
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    //animation for icons
+    gsap.from(".icons a i",
+    {
+      opacity: 0,
+      y:-300,
+      scale:0,
+      duration: 1.5,
+      stagger:0.1,
+      scrollTrigger:
+      {
+        trigger: ".icons a i",
+        scroller: "body",
+        start: "top 80%",
+        end: "top 80%",
+        scrub: 3
+      }
+
+    }
+  )
+
+  function getRandomColor() {
+    const randomNumber = Math.floor(Math.random() * 16777216);
+    const randomColor = '#' + randomNumber.toString(16).padStart(6, '0');
+    return randomColor;
+}
+
+
+  function changeColor()
+  {
+    const colors = getRandomColor()
+    const linkdin = document.querySelector("#linkdin")
+    const instagram = document.querySelector("#instagram")
+    const  admin = document.querySelector("#admin")
+    const tweeter = document.querySelector("#tweeter")
+    const facebook = document.querySelector("#facebook")
+
+    linkdin.style.color = colors
+    instagram.style.color = colors
+    admin.style.color = colors
+    tweeter.style.color = colors
+    facebook.style.color = colors
+
+  }
+
+
+  setInterval(()=>
+  {
+    changeColor()
+  },1000)
+</script>

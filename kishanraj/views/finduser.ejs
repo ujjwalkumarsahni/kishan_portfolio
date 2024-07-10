@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Table</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            color: white;
+        }
+
+        table,h1
+        {
+            margin-top: 7%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <%-include('nav')%>
+    <h1>User Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% user.forEach(function(data) { %>
+                <tr>
+                    <td><%= data.name %></td>
+                    <td><%= data.email %></td>
+                    <td><%= data.subject %></td>
+                    <td><%= data.message %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <%-include('icons')%>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Deleted Successfully</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .success-box {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: changeShadowColor 5s infinite;
+        }
+        .go-back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .go-back-btn:hover {
+            background-color: #0056b3;
+        }
+        @keyframes changeShadowColor {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            }
+            25% {
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(0, 0, 255, 0.6);
+            }
+            75% {
+                box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-box">
+        <h1>User Deleted Successfully</h1>
+    </div>
+    <script>
+        const successBox = document.querySelector('.success-box');
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeBoxShadowColor() {
+            const color = getRandomColor();
+            successBox.style.boxShadow = `0 0 20px ${color}`;
+        }
+
+        setInterval(changeBoxShadowColor, 1000); // Change color every 1 second
+
+        function goBack() {
+            window.location.href = '/submit';
+        }
+    </script>
+</body>
+</html>

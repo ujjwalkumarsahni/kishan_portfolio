@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Actions</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #302b2b;
+        }
+        .action-box {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+            animation: changeShadowColor 5s infinite;
+        }
+        .input-field {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .action-btn:hover {
+            background-color: #0056b3;
+        }
+        @keyframes changeShadowColor {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            }
+            25% {
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(0, 0, 255, 0.6);
+            }
+            75% {
+                box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="action-box">
+        <h2>Find Single User</h2>
+        <form action="/find" method="post">
+            <input type="email" class="input-field" placeholder="Enter email" name="findEmail">
+        <button class="action-btn" type="submit">Find Single</button>
+        </form>
+    </div>
+
+    <div class="action-box">
+        <h2>DeleteSingle User</h2>
+        <form action="/delete" method="post">
+            <input type="email" class="input-field" placeholder="Enter email" name="deleteEmail">
+        <button class="action-btn" type="submit">Delete Single</button>
+        </form>
+    </div>
+
+    <div class="action-box">
+        <h2>Find All User</h2>
+        <form action="/findall" method="get">
+            
+        <button class="action-btn" type="submit">Find All</button>
+        </form>
+    </div>
+
+    <%-include('icons')%>
+
+    <script>
+        const actionBoxes = document.querySelectorAll('.action-box');
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeBoxShadowColor() {
+            actionBoxes.forEach(box => {
+                const color = getRandomColor();
+                box.style.boxShadow = `0 0 20px ${color}`;
+            });
+        }
+
+        setInterval(changeBoxShadowColor, 1000); // Change color every 1 second
+    </script>
+</body>
+</html>

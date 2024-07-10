@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .education {
+            color: white;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+
+        .highersecondary {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 5%;
+
+        }
+
+
+
+        .education img {
+            width: 30%;
+            border-radius: 20%;
+        }
+
+        .education .same {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            width: 90%;
+            text-align: center;
+            padding: 10%;
+            border-bottom: 1px solid white;
+            margin-top: 10%;
+        }
+
+        .education h3 {
+            font-size: 2rem;
+            color: rgb(234, 150, 23);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <%-include('nav')%>
+
+        <div class="education">
+            <div class="highersecondary">
+                <h3>Education</h3>
+                <p>My education has been a journey of self-discovery and growth. My educational details are as follows.
+                </p>
+
+            </div>
+
+            <!-- b.semenary -->
+            <div class="bsemenary same bs">
+                <img src="https://www.jagranimages.com/images/03_11_2017-03cpr2-c-2.jpg" alt="">
+
+                <h3>Percentage 75.6%</h3>
+                <p>I completed my Higher Secondary (X) at Tirhut High School Mehsi, East Champaran.</p>
+            </div>
+
+
+            <!-- shiv janam roy -->
+            <div class="sivjanaroy same sr">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfKVw9qV6reFqGlAvkDaUPgFwQbWAmM385fg&s"
+                    alt="">
+
+                <h3>Percentage 79.9%</h3>
+                <p>I completed my Intermediate of science (PCM) from Shiv Janam Ray Inter College, Chhapra </p>
+            </div>
+
+
+            <!-- jiet -->
+            <div class="jiet same">
+
+                <img src="https://upload.wikimedia.org/wikipedia/en/7/74/Jodhpur_Institute_of_Engineering_and_Technology_logo.png"
+                    alt="" class="jiet">
+
+                <h3>CGPA 8.22</h3>
+                <p>I pursuing Bachelor's degree in Computer Science and Engineering at Jodhpur Institute of Engineering
+                    and Technology. </p>
+            </div>
+
+            <div class="div4">
+
+            </div>
+        </div>
+
+        <%-include('icons')%>
+
+
+
+            <script>
+                const bs = document.querySelector('.bs')
+                const sr = document.querySelector(".sr")
+                const jiet = document.querySelector(".jiet")
+                const port = document.querySelector(".port li")
+
+
+                const linkdin = document.querySelector("#linkdin")
+                const instagram = document.querySelector("#instagram")
+                const admin = document.querySelector("#admin")
+                const tweeter = document.querySelector("#tweeter")
+                const facebook = document.querySelector("#facebook")
+
+               
+
+                function getRandomColor() {
+
+                    const r = Math.floor(Math.random() * 256);
+                    const g = Math.floor(Math.random() * 256);
+                    const b = Math.floor(Math.random() * 256);
+
+
+                    const color = `rgba(${r}, ${g}, ${b}, 1)`;
+
+                    bs.style.boxShadow = `${color} 0px 0px 20px, ${color} 0px 1px 1px`;
+
+                    sr.style.boxShadow = `${color} 0px 0px 20px, ${color} 0px 1px 1px`;
+
+                    jiet.style.boxShadow = `${color} 0px 0px 20px, ${color} 0px 1px 1px`;
+
+                    port.style.color = color
+
+                    linkdin.style.color = color
+                    instagram.style.color = color
+                    admin.style.color = color
+                    tweeter.style.color = color
+                    facebook.style.color = color
+
+                }
+
+
+                setInterval(() => {
+                    getRandomColor()
+                }, 1000)
+
+
+
+            </script>
+</body>
+
+</html>

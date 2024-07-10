@@ -1,0 +1,221 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  *
+  {
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+
+  }
+
+  /*hover on list*/
+  .redirect li a:hover {
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color: brown;
+    transition-duration: 1000ms;
+    box-shadow: rgba(168, 18, 18, 0.4) 0px 2px 4px, rgba(209, 15, 15, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  .redirect li a:active{
+    color: aqua;
+    background-color: blue;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color: black;
+  }
+
+  nav ul li a,
+  nav ul li {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    z-index: 0;
+  }
+
+  .redirect {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    margin-left: 15%;
+  }
+
+  .redirect ul li a:hover {
+    background-color: aqua;
+  }
+
+  .port li {
+    font-size: 40px;
+    z-index: 0;
+  }
+
+  .port li::first-letter {
+    color: red;
+    font-weight: bold;
+  }
+
+  /*icon*/
+  #hamburger {
+    color: white;
+    font-size: 4rem;
+
+  }
+
+  .openclose {
+    position: sticky;
+    top: 10px;
+    margin-left: 80%;
+    z-index: 1;
+    right: 10px;
+    display: none;
+
+  }
+
+
+
+  .menu {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    display: none;
+    background-color: transparent;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    list-style-type: none;
+
+
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+
+  }
+
+
+
+  /*media for respo*/
+
+  @media screen and (max-width: 650px) {
+    .main {
+      margin-top: 10rem;
+      flex-direction: column;
+      row-gap: 5rem;
+      flex-direction: column-reverse;
+    }
+
+    header {
+      display: none;
+    }
+
+    .openclose {
+      display: block;
+    }
+
+  }
+</style>
+<header class="headers">
+  <nav>
+    <ul class="port">
+      <li>Portfolio</li>
+    </ul>
+
+    <ul class="redirect">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/experience">Experience</a></li>
+      <li><a href="/project">Project</a></li>
+      <li><a href="/education">Education</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="openclose">
+  <!-- = icon -->
+  <i class="fa-solid fa-equals" id="hamburger"></i>
+</div>
+
+<div class="menu">
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/skills">Skills</a></li>
+    <li><a href="/experience">Experience</a></li>
+    <li><a href="/project">Project</a></li>
+    <li><a href="/education">Education</a></li>
+  </ul>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const hamburger = document.querySelector("#hamburger")
+  const menu = document.querySelector(".menu")
+  hamburger.addEventListener('click', () => {
+
+      
+
+    if (hamburger.className == "fa-solid fa-equals") {
+      hamburger.classList = "fa-solid fa-xmark"
+      menu.style.display = "block"
+      //animation for nav
+      const tl = gsap.timeline()
+      //nav bar
+      tl.from(".menu li",
+        {
+          x:100,
+          duration: 1,
+          stagger: 0.1,
+        })
+
+    
+    }
+    else {
+
+      hamburger.classList = "fa-solid fa-equals"
+      menu.style.display = "none"
+
+    } 
+
+  })
+
+
+
+  //animation for nav
+  const tl = gsap.timeline()
+  //nav bar
+  tl.from(".redirect li , .port",
+    {
+      y: -100,
+      duration: 2,
+      stagger: 0.1,
+    })
+</script>
